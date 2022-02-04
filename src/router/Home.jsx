@@ -1,14 +1,14 @@
-import DataFetcher from "../hooks/dataFetcher";
 import StoryList from "../components/StoryList";
 import { useState } from "react";
 import { useEffect } from "react";
 
 const Home = (props) => {
-  const { loading, newList } = DataFetcher("best");
+  //const { loading, newList } = DataFetcher("best");
 
   return (
     <>
-      {loading ? (
+      <h1>home</h1>
+      {/* {loading ? (
         <section className="new_page">
           <div className="hero">
             <img src="" alt="hero_img" />
@@ -29,7 +29,7 @@ const Home = (props) => {
         </section>
       ) : (
         "loadong"
-      )}
+      )} */}
     </>
   );
 };

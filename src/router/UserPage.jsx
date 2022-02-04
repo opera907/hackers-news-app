@@ -1,12 +1,23 @@
+import { useGetUserbyNameQuery } from "../services/api";
+
 export const Userpage = (props) => {
   const {
     match: {
       params: { name },
     },
   } = props;
+  const { data, isLoading, error } = useGetUserbyNameQuery(name);
+  console.log(data);
+
   return (
-    <section className="user_page">
-      <h1>i'm on {name} page </h1>
-    </section>
+    <>
+      {isLoading ? (
+        "loading"
+      ) : (
+        <section className="user_page">
+          <h1>i'm on {data.id} page </h1>
+        </section>
+      )}
+    </>
   );
 };

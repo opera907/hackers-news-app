@@ -1,17 +1,18 @@
-import DataFetcher from "../hooks/dataFetcher";
 import StoryList from "./../components/StoryList";
 import { useState } from "react";
 import { useEffect } from "react";
-
+import { useGetPostsByTypeQuery } from "../services/api";
 const New = (props) => {
-  const { loading, newList } = DataFetcher("new");
+  //const { loading, newList } = DataFetcher("new");
+  const { data, error, isFetching, isLoading } = useGetPostsByTypeQuery("new");
+
   const [pannel, setPannel] = useState("story");
   const handleClick = (e) => setPannel(e.target.value);
   console.log(pannel);
-
+  console.log(data);
   return (
     <>
-      {loading ? (
+      {!isLoading ? (
         <section className="new_page">
           <div className="hero">
             <img src="" alt="hero_img" />
@@ -32,8 +33,8 @@ const New = (props) => {
           </div>
           <ul>
             {pannel === "story"
-              ? newList.map(({ data: storyData }) => {
-                  return <StoryList key={storyData.id} story={storyData} />;
+              ? data.slice(0, 30).map((id) => {
+                  return <StoryList key={id} id={id} />;
                 })
               : "user"}
           </ul>

@@ -10,9 +10,19 @@ export const hackersApi = createApi({
     getPostsByType: builder.query({
       query: (type) => `${type}stories.json`,
     }),
+    getItembyId: builder.query({
+      query: (id) => `item/${id}.json`,
+    }),
+    getUserbyName: builder.query({
+      query: (name) => `user/${name}.json`,
+    }),
   }),
 });
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetPostsByTypeQuery } = hackersApi;
+export const {
+  useGetPostsByTypeQuery,
+  useGetItembyIdQuery,
+  useGetUserbyNameQuery,
+} = hackersApi;
