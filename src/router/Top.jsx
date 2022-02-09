@@ -7,7 +7,7 @@ import StoryList from "../components/storyList/StoryList";
 const Top = (props) => {
   //const { loading, newList } = DataFetcher("top");
   const { data, error, isFetching, isLoading } = useGetPostsByTypeQuery("top");
-  const [pannel, setPannel] = useState("story");
+  const [pannel, setPannel] = useState("post");
   const handleClick = (e) => setPannel(e.target.value);
   console.log(data);
   return (

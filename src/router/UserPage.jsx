@@ -15,12 +15,12 @@ export const Userpage = (props) => {
   const { data, isLoading, error } = useGetUserbyNameQuery(name);
   const [pannel, setPannel] = useState("story");
   const handleClick = (e) => setPannel(e.target.value);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(addNews(data));
-  }, []);
-  const { submitted } = useSelector((state) => state.news.news);
-  console.log(submitted);
+  // const dispatch = useDispatch();
+  // useEffect(() => {
+  //   dispatch(addNews(data));
+  // }, []);
+  //const { submitted } = useSelector((state) => state.news.news);
+  console.log(data);
   return (
     <>
       {isLoading ? (
