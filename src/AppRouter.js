@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Header from "./components/Header";
+import Header from "./components/header/Header";
 import New from "./router/New";
 import Top from "./router/Top";
 import Home from "./router/Home";
@@ -9,6 +9,8 @@ import { useGetPostsByTypeQuery } from "./services/api";
 import { useSelector } from "react-redux";
 import Show from "./router/Show";
 import Ask from "./router/Ask";
+import "./index.css";
+import { Comment } from "./components/comment/Comment";
 
 const AppRouter = () => {
   return (
@@ -16,13 +18,14 @@ const AppRouter = () => {
       <Header />
       <Switch>
         <main>
-          <Route path="/" component={Home} exact />
+          <Route path="/" exact={true} component={Home} />
           <Route path="/top" component={Top} />
           <Route path="/new" component={New} />
           <Route path="/show" component={Show} />
           <Route path="/ask" component={Ask} />
           <Route path="/job" component={Job} />
           <Route path="/user/:name" component={Userpage} />
+          <Route path="/item/:ids" component={Comment} />
         </main>
       </Switch>
     </BrowserRouter>

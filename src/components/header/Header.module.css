@@ -1,0 +1,63 @@
+.header_container {
+  background-color: #ed702d;
+}
+.header {
+  padding: 7px 20px;
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.native_bar {
+  background-image: url(../../assets/header/native_bar.png);
+  background-repeat: no-repeat;
+  height: 45px;
+  width: 100%;
+}
+.logo {
+  position: relative;
+  padding-left: 29px;
+  letter-spacing: -0.0025em;
+}
+.logo::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: block;
+  background-image: url(../../assets/header/Ellipse.png);
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+.util_gnb > a {
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+.btn_color_theme {
+  background-image: url(../../assets/header/ico_color_theme.png);
+}
+.btn_customer {
+  background-image: url(../../assets/header/ico_question.png);
+  margin-left: 8px;
+}
+.gnb {
+  background-color: #fff;
+  padding: 0 20px;
+  display: flex;
+  flex: 1;
+}
+.gnb li {
+  width: calc(100% / 6);
+  text-align: center;
+}
+.gnb li a {
+  line-height: 40px;
+  color: #727272;
+  display: block;
+}
