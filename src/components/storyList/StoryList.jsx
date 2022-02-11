@@ -16,7 +16,7 @@ const StoryList = ({ id }) => {
       ) : (
         <li className={`${styles.post_list}`}>
           <h3 className="ft_head_line_2_bold">
-            {data && data.type === "story" ? (
+            {data && data.type !== "comment" ? (
               <a href={data.url} target="_blank">
                 {data.title}
               </a>

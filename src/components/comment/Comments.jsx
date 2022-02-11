@@ -11,7 +11,6 @@ export const Comments = ({ id, setShow }) => {
   const desc =
     data && (data.text ? { __html: data.text } : { __html: data.url });
   const [showReplies, setShowReplies] = useState(setShow);
-  console.log(showReplies);
 
   return (
     <>

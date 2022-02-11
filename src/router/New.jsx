@@ -1,9 +1,7 @@
 import StoryList from "../components/storyList/StoryList";
-import { useEffect } from "react";
 import { useGetPostsByTypeQuery } from "../services/api";
 
 const New = (props) => {
-  //const { loading, newList } = DataFetcher("new");
   const { data, error, isFetching, isLoading } = useGetPostsByTypeQuery("new");
 
   return (

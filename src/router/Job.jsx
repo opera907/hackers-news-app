@@ -3,7 +3,7 @@ import StoryList from "../components/storyList/StoryList";
 
 const Job = (props) => {
   const { data, error, isFetching, isLoading } = useGetPostsByTypeQuery("job");
-  //console.log(data);
+  console.log(data);
   return (
     <>
       {isLoading ? (

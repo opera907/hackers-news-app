@@ -1,12 +1,6 @@
-import StoryList from "../components/storyList/StoryList";
-import { useState } from "react";
-import { useEffect } from "react";
-import { useSelector } from "react-redux";
-import { getAllNews } from "../services/testSlice";
 import { useGetPostsByTypeQuery } from "../services/api";
 
 const Home = (props) => {
-  //const { loading, newList } = DataFetcher("best");
   const { data: topData } = useGetPostsByTypeQuery("top");
   const { data: newData } = useGetPostsByTypeQuery("new");
   const { data: showData } = useGetPostsByTypeQuery("show");

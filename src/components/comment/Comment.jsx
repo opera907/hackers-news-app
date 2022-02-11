@@ -1,7 +1,6 @@
 import { useGetItembyIdQuery } from "../../services/api";
 import Comments from "./Comments";
 import styles from "./Comment.module.css";
-import { useRef, useState } from "react";
 import Timeago from "timeago-react";
 import { ReactComponent as UserIcon } from "../../assets/icons/user_ico.svg";
 import { ReactComponent as CommentIcon } from "../../assets/icons/comment_ico.svg";
@@ -13,7 +12,6 @@ export const Comment = (props) => {
     },
   } = props;
   const { data, isLoading } = useGetItembyIdQuery(ids);
-  //console.log(data);
   const desc =
     data && (data.text ? { __html: data.text } : { __html: data.url });
   const modeHandler = (e) => {
