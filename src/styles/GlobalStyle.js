@@ -3,6 +3,12 @@ import reset from "styled-reset";
 
 const GlobalStyle = createGlobalStyle`
     ${reset};
+    :root {
+      --svelt-orange : #ED702D;
+    }
+    li{
+      list-style:none;
+    }
     body{
         padding: 0;
         margin: 0;
@@ -49,6 +55,10 @@ const GlobalStyle = createGlobalStyle`
       font-size: 24px;
       font-weight: bold;
     }
+    .ft_cont_tit_bold {
+      font-size: 22px;
+      font-weight: bold;
+    }
     .ft_head_line_1_md {
       font-size: 22px;
       font-weight: 500;
@@ -88,16 +98,20 @@ const GlobalStyle = createGlobalStyle`
     .hero > img {
       width: 100%;
     }
-    .content {
-      padding: 24px 20px;
-    }
+
     .category_story::after {
       left: 4px !important;
     }
     .category_user::after {
       left: calc(50% - 4px) !important;
     }
-    
+    .category_comments::after {
+      left: calc(50% - 4px) !important;
+    }
+    .post_wrap{
+      padding: 20px
+    }
+
 `;
 
 export default GlobalStyle;

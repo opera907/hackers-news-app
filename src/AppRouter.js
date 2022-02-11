@@ -5,11 +5,8 @@ import Top from "./router/Top";
 import Home from "./router/Home";
 import Job from "./router/Job";
 import { Userpage } from "./router/UserPage";
-import { useGetPostsByTypeQuery } from "./services/api";
-import { useSelector } from "react-redux";
 import Show from "./router/Show";
 import Ask from "./router/Ask";
-import "./index.css";
 import { Comment } from "./components/comment/Comment";
 
 const AppRouter = () => {

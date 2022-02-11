@@ -12,10 +12,13 @@
 .llist_desc {
   margin-top: 22px;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   width: 100%;
   flex: 1;
+}
+.llist_desc > * {
+  flex: none;
 }
 .author {
   font-weight: 500;
@@ -29,10 +32,13 @@
   margin-right: 3.33px;
 }
 .desc_info {
+  margin-left: 6px;
 }
+
 .comments {
+  margin-left: auto;
   font-size: 500;
-  color: #ed702d;
+  color: var(--svelt-orange);
   display: flex;
   align-items: center;
   float: right;

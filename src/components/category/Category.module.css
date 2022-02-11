@@ -2,6 +2,7 @@
   position: relative;
   height: 40px;
   padding: 4px 5px;
+  margin: 32px 20px;
   box-sizing: border-box;
   background: #ffffff;
   border: 0.75px solid #dfdfdf;
@@ -14,7 +15,7 @@
   height: 100%;
   display: inline-block;
   background-color: transparent;
-  color: #222;
+  color: #b7b7b7;
   border-radius: 2222px;
   font-weight: 600;
   position: relative;
@@ -28,7 +29,7 @@
   height: 32px;
   box-sizing: border-box;
   border-radius: 2222px;
-  background-color: orangered;
+  background-color: var(--svelt-orange);
   position: absolute;
   z-index: 1;
   top: 50%;

@@ -1,0 +1,51 @@
+.user_page {
+  box-sizing: border-box;
+}
+.user_page > * {
+  margin: 20px;
+}
+.user_info_wrap {
+  background-color: #fff;
+  border: 0.7px solid #dfdfdf;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.05), 0px 6px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+.user_id {
+  padding: 24px 16px;
+}
+.info_cont {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  padding: 0 16px;
+}
+.info_tit {
+  padding: 1px 6px;
+  border: 0.75px solid #ed702d;
+  box-sizing: border-box;
+  border-radius: 2222px;
+  color: var(--svelt-orange);
+  font-weight: normal;
+}
+.info_desc {
+  padding: 0 4px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  color: #555555;
+}
+.karma_cont {
+  padding-left: 8px;
+}
+.user_about {
+  padding: 24px 16px;
+}
+.user_about > p {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #3f3f3f;
+  margin-top: 24px;
+}

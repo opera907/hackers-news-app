@@ -1,6 +1,5 @@
 import { useGetPostsByTypeQuery } from "../services/api";
 import StoryList from "../components/storyList/StoryList";
-import { List } from "./../components/List";
 
 const Job = (props) => {
   const { data, error, isFetching, isLoading } = useGetPostsByTypeQuery("job");
@@ -8,7 +7,7 @@ const Job = (props) => {
   return (
     <>
       {isLoading ? (
-        "loading"
+        ""
       ) : (
         <section className="job_page">
           <div className="hero">
@@ -17,13 +16,7 @@ const Job = (props) => {
               alt="hero_img"
             />
           </div>
-          <h1>job story</h1>
-          <div className="filter">
-            <select name="" id="dd">
-              <option value="dd"></option>
-            </select>
-          </div>
-          <ul>
+          <ul className="post_wrap">
             {data.slice(0, 30).map((id) => {
               return <StoryList key={id} id={id} />;
             })}

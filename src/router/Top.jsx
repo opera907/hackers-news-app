@@ -9,7 +9,7 @@ const Top = (props) => {
   const { data, error, isFetching, isLoading } = useGetPostsByTypeQuery("top");
   const [pannel, setPannel] = useState("post");
   const handleClick = (e) => setPannel(e.target.value);
-  console.log(data);
+
   return (
     <>
       {!isLoading ? (
@@ -26,12 +26,8 @@ const Top = (props) => {
               pannel={pannel}
               value={["post", "user"]}
             />
-            <div className="filter">
-              <select name="" id="dd">
-                <option value="dd"></option>
-              </select>
-            </div>
-            <ul>
+
+            <ul className="post_wrap">
               {pannel === "post"
                 ? data.slice(0, 30).map((id) => {
                     return <StoryList key={id} id={id} />;

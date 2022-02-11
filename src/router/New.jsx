@@ -16,21 +16,14 @@ const New = (props) => {
               alt="hero_img"
             />
           </div>
-
-          <h1>new story</h1>
-          <div className="filter">
-            <select name="" id="dd">
-              <option value="dd"></option>
-            </select>
-          </div>
-          <ul>
+          <ul className="post_wrap">
             {data.slice(0, 30).map((id) => {
               return <StoryList key={id} id={id} />;
             })}
           </ul>
         </section>
       ) : (
-        "loadong"
+        ""
       )}
     </>
   );

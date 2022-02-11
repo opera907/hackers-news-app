@@ -5,7 +5,7 @@ import { useState } from "react";
 export const UserList = ({ id }) => {
   const [post, setPosts] = useState([]);
 
-  // const { data: userData, isLoading } = useGetUserbyNameQuery(by);
+  const { data: userData, isLoading } = useGetUserbyNameQuery(id);
   // const { id: userId, karma } = userData;
   return (
     <>
